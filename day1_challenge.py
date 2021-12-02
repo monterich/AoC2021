@@ -1,6 +1,4 @@
 import pandas as pd
-
-# creating pandas df
 df = pd.read_csv('.\input_files\day1_input.csv')
 
 
@@ -16,6 +14,7 @@ def counter(X):
 
 print('Day1 \nResult Part1: '+str(counter(df.input)))
 
+# part 2
 def sliding_counter(X):
     count = 0
     max_val = len(X)-3
