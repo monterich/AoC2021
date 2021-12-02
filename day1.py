@@ -12,7 +12,8 @@ def counter(X):
             continue
     return count
 
-print('Day1 \nResult Part1: '+str(counter(df.input)))
+result1 = counter(df.input)
+print(f'Day1 \nResult Part1: {result1}')
 
 # part 2
 def sliding_counter(X):
@@ -30,4 +31,5 @@ def sliding_counter(X):
         m += 1
     return count
 
-print('result Part2: '+str(sliding_counter(df.input)))
+result2 = sliding_counter(df.input)
+print(f'Result Part2: {result2} ')
