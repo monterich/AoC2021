@@ -1,8 +1,8 @@
 import pandas as pd
 
-df = pd.read_csv('day1_input.csv')
-print(df.input.count())
-print(df.head())
+# creating pandas df
+df = pd.read_csv('.\input_files\day1_input.csv')
+
 
 # part1
 def counter(X):
@@ -13,3 +13,22 @@ def counter(X):
         else:
             continue
     return count
+
+print('Day1 \nResult Part1: '+str(counter(df.input)))
+
+def sliding_counter(X):
+    count = 0
+    max_val = len(X)-3
+    m = 1
+
+    while m <= max_val:
+        a = X[X.index.isin([i for i in range(m,m+3)])].sum()
+        b = X[X.index.isin([i for i in range(m-1,m+2)])].sum()
+        if a > b:
+            count += 1
+        else:
+            count += 0
+        m += 1
+    return count
+
+print('result Part2: '+str(sliding_counter(df.input)))
