@@ -8,7 +8,6 @@ for val in range(2000):
     fuel = 0
     for i in lines:
         fuel += abs(val-i)
-
     new_entry = {val: fuel}
     counter.update(new_entry)
 result = min(fuel for fuel in counter.values())
@@ -25,3 +24,4 @@ for val in range(2000):
     counter.update(new_entry)
 result2 = min(fuel for fuel in counter.values())
 print(f'Part2\nMinimum Fule to be used: {result2}')
+
